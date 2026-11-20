@@ -6,5 +6,6 @@ __pycache__/
 
 # Large splat data (too big for GitHub; share separately)
 data/gaussian_splats/**/point_cloud*.ply
+data/gaussian_splats/roza_split_by_treatment/**/*.ply
 *.usdc
 *.usdz

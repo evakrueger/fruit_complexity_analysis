@@ -20,6 +20,16 @@ src/fruit_sim/scripts/run_splat.sh other.usdc       # or any other .usdc
 
 The first launch takes a few minutes while shaders compile. Once the scene loads, select `splat` in the Stage panel and press **F** to frame it.
 
+## View one treatment section (Roza row)
+
+```bash
+src/fruit_sim/scripts/run_treatment.sh pruned_thinned   # or: pruned, control
+src/fruit_sim/scripts/run_treatment.sh control 3        # lower detail level (0 = full, 5 = coarsest)
+CUTS="0.30 0.65" src/fruit_sim/scripts/run_treatment.sh pruned   # move section boundaries
+```
+
+The row is split into thirds along its length (pruned + thinned at the low-x end, then pruned, then control). Each section is converted once and cached in `data/gaussian_splats/roza_split_by_treatment/treatments/`.
+
 ## Convert a .ply splat to USD
 
 ```bash
